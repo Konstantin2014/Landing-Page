@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: white;
+  padding: 25px 0 0 30px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
 .bb {
   border: 1px solid red;
 }
@@ -11,6 +21,8 @@
 body {
   font-family: "Monserat", sans-serif;
 }
+
+/* HEADER */
 
 header {
   height: 65px;
@@ -66,4 +78,115 @@ header .container {
 
 .nav_menu > ul > li:last-child > a {
   margin: 0;
+}
+
+/* MAIN */
+
+.main_board .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.main_bord__left {
+  width: 50%;
+}
+
+.main_board .container > img {
+  margin: auto;
+}
+
+.main_board {
+  height: 500px;
+  background: url(./src/bg.jpg);
+  background-size: cover;
+  background-position: 50%, -50%;
+  position: relative;
+}
+
+.main_board::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgb(33, 42, 73, 0.6);
+}
+
+.main_board h1::before {
+  content: "";
+  width: 115px;
+  height: 5px;
+  position: absolute;
+  background: rgb(105, 171, 238);
+  top: 0;
+  left: 0;
+}
+
+.main_board h1::after {
+  content: "";
+  width: 5px;
+  height: 115px;
+  position: absolute;
+  background: rgb(105, 171, 238);
+  top: 0;
+  left: 0;
+}
+.main_bord__left > p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 45px;
+}
+
+.main_board__button {
+  display: flex;
+}
+
+.main_board__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  width: 165px;
+  height: 50px;
+  border: 1px solid rgb(105, 171, 238);
+  border-radius: 0 5px 0 5px;
+  font-size: 12px;
+  transition-duration: 0.3;
+}
+
+.main_board__link > i {
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: 30px;
+  color: rgb(105, 171, 238);
+  width: 26px;
+  transition-duration: 0.3;
+}
+
+.fab {
+  color: white;
+  font-size: 30px;
+}
+
+.main_board__link:first-of-type {
+  margin-right: 20px;
+}
+
+.main_board__title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main_board__link:hover {
+  background: rgb(105, 171, 238);
+}
+
+.main_board__link:hover > i {
+  color: white;
 }
