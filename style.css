@@ -27,6 +27,9 @@ body {
 header {
   height: 65px;
   background: rgb(16, 1, 103);
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 .container {
@@ -80,7 +83,7 @@ header .container {
   margin: 0;
 }
 
-/* MAIN */
+/*HERO*/
 
 .main_board .container {
   display: flex;
@@ -100,7 +103,7 @@ header .container {
 
 .main_board {
   height: 500px;
-  background: url(./src/bg.jpg);
+  background: url(./src/bg.jpg) fixed;
   background-size: cover;
   background-position: 50%, -50%;
   position: relative;
@@ -157,7 +160,7 @@ header .container {
   border: 1px solid rgb(105, 171, 238);
   border-radius: 0 5px 0 5px;
   font-size: 12px;
-  transition-duration: 0.3;
+  transition-duration: 0.3s;
 }
 
 .main_board__link > i {
@@ -166,7 +169,7 @@ header .container {
   font-size: 30px;
   color: rgb(105, 171, 238);
   width: 26px;
-  transition-duration: 0.3;
+  transition-duration: 0.3s;
 }
 
 .fab {
@@ -188,5 +191,116 @@ header .container {
 }
 
 .main_board__link:hover > i {
+  color: white;
+}
+
+/* SECTION SERVICES*/
+
+.services,
+.works,
+.team,
+.blog,
+.contact,
+footer {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(32, 32, 43);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 > span {
+  position: relative;
+}
+h2 > span::after {
+  content: "";
+  height: 2px;
+  background: rgb(32, 32, 43);
+  width: 40%;
+  margin-left: -20%;
+  left: 50%;
+  top: 120%;
+  position: absolute;
+}
+
+.services_blok {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.services_item {
+  padding: 30px;
+  flex: 0 0 32%;
+  text-align: center;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+}
+
+.services_item__icon {
+  border: 1px solid rgb(32, 32, 43);
+  border-radius: 50%;
+  height: 108px;
+  line-height: 108px;
+  text-align: center;
+  width: 108px;
+  margin: 0 auto;
+  transition-duration: 0.3s;
+}
+
+.services_item__icon > i {
+  font-size: 50px;
+  color: rgb(32, 32, 43);
+  line-height: 108px;
+  transition-duration: 0.3s;
+}
+
+.services_item > h3 {
+  margin: 23px 0;
+  text-align: center;
+  color: rgb(32, 32, 43);
+}
+
+.services_item > p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans" sans-serif;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: rgb(32, 32, 43);
+}
+
+.services_item > a {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  color: rgb(32, 32, 43);
+  font-size: 18px;
+  border-radius: 0 5px 0 5px;
+  border: 1px solid rgb(32, 32, 43);
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.services_item:hover {
+  box-shadow: 0 5px 25px 0 rgba(5, 5, 5, 0.2);
+}
+
+.services_item__icon:hover {
+  background: rgb(32, 32, 43);
+}
+
+.services_item__icon:hover > i {
   color: white;
 }
