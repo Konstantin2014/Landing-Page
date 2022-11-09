@@ -14,10 +14,6 @@ h1 {
   position: relative;
 }
 
-.bb {
-  border: 1px solid red;
-}
-
 body {
   font-family: "Monserat", sans-serif;
 }
@@ -303,4 +299,80 @@ h3 {
 
 .services_item__icon:hover > i {
   color: white;
+}
+
+/*SECTION  WORKS */
+
+.works {
+  background: url(./src/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.works::after,
+.blog::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(33, 42, 73, 0.6);
+  z-index: 1;
+}
+
+.works h2,
+.blog h2 {
+  color: rgb(255, 255, 255);
+}
+
+.works h2 > span::after,
+.blog h2 > span::after {
+  background: white;
+}
+
+.works > .container,
+.blog > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.works .container > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.works_container {
+  flex: 0 0 60%;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans" sans-serif;
+  line-height: 24px;
+  color: white;
+}
+
+.works_container > h3 {
+  margin-bottom: 30px;
+}
+
+.works_container > ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.works__container > ul > li {
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.works_container > ul > li::before {
+  content: "\f105";
+  position: absolute;
+  left: 0;
+  font-family: fontawesome;
+  color: aquamarine;
 }
