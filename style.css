@@ -611,3 +611,93 @@ h3 {
 .blog .button {
   margin-top: 30px;
 }
+
+/* SECTION CONTACT */
+
+.contact .map {
+  margin-top: 30px;
+}
+
+/* SECTION FORM */
+
+.form {
+  height: 200px;
+  background: url(./src/bg.jpg) no-repeat fixed;
+  background-position: 50% -50px;
+  background-size: cover;
+  position: relative;
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(33, 42, 73, 0.6);
+  z-index: 1;
+}
+
+.form > .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.form input[type="email"] {
+  background: transparent;
+  border: 1px solid rgb(105, 171, 238);
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 10px;
+  width: 450px;
+}
+
+.form input[type="email"]:focus {
+  border: 1px solid rgb(105, 171, 238);
+  outline: none;
+}
+
+.form button {
+  background: rgb(105, 171, 238);
+  border: 1px solid rgb(105, 171, 238);
+  color: #ffffff;
+  font-size: 22px;
+  width: 100px;
+  transition-duration: 0.3s;
+}
+
+.form button:hover {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: rgb(105, 171, 238);
+  cursor: pointer;
+}
+
+.form_text {
+  color: rgb(105, 171, 238);
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form_text > span {
+  color: white;
+  font-weight: 600;
+}
+
+.form form {
+  display: flex;
+  justify-content: center;
+}
+
+.form input::-webkit-input-placeholder {
+  color: rgb(204, 204, 204);
+}
