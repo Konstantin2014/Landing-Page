@@ -701,3 +701,52 @@ h3 {
 .form input::-webkit-input-placeholder {
   color: rgb(204, 204, 204);
 }
+
+/* FOOTER */
+
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social_cont {
+  margin: 20px 0;
+}
+
+.social_cont > a {
+  color: #161c35;
+  font-size: 16px;
+  margin: 10px;
+  text-decoration: none;
+  position: relative;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.3s;
+}
+
+.social_cont > a > .fab {
+  color: #161c35;
+  font-size: 18px;
+}
+.social_cont > a::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 1px solid #161c35;
+  transform: rotate(45deg);
+  position: absolute;
+  left: -3px;
+  top: -5px;
+  transition-duration: 0.3s;
+  z-index: -1;
+}
+
+.social_cont > a:hover .fab {
+  color: #ffffff;
+}
+
+.social_cont > a:hover::before {
+  background: #161c35;
+}
